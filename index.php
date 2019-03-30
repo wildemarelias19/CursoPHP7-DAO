@@ -43,14 +43,21 @@ $usuario->login("elias","1234");
 echo $usuario;*/
 
 
-//insert de um usuário novo
+//criando um novo usuário
+/*
 $aluno = new Usuario("aluno","@lun0");
 
 $aluno->insert();
 
-echo $aluno;
+echo $aluno;*/
 
-//tester
+$usuario = new Usuario();
+
+$usuario->loadById(9);
+
+$usuario->update("professor","faeçf");
+
+echo $usuario;
 
 
 

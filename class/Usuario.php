@@ -107,11 +107,28 @@ public function insert(){
 		$this->setData($results[0]);
 	}
 }
+
+
+	public function update($login,$password){
+
+		$this->setDesLogin($login);
+		$this->setDesSenha($password);
+		$sql = new Sql();
+		$sql-> query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha=:PASSWORD WHERE idusuario=:ID",array(
+			":LOGIN"=>$this->getDesLogin(),
+			":PASSWORD"=>$this->getDesSenha(),
+			":ID"=>$this->getIdusuario()
+		));
+	}
+
 	//método construtor
 	public function __construct($login="",$password=""){
 		$this->setDesLogin($login);
 		$this->setDesSenha($password);
 	}
+
+
+
 
 	public function __toString(){
 		return json_encode(array(
