@@ -121,6 +121,21 @@ public function insert(){
 		));
 	}
 
+
+	public function delete(){
+
+		$sql = new Sql();
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+			':ID'=>$this->getIdusuario()
+		));
+
+		$this->setIdsuario(0);
+		$this->setDesLogin("");
+		$this->setDesSenha("");
+		$this->setDtCadastro(new DateTime());
+
+	}
+
 	//método construtor
 	public function __construct($login="",$password=""){
 		$this->setDesLogin($login);
