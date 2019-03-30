@@ -50,7 +50,7 @@ $aluno->insert();
 
 echo $aluno;
 
-//teste
+//tester
 
 
 
