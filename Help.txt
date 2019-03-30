@@ -1,0 +1,26 @@
+git init 
+//para iniciar repositório e criar pasta oculta .git
+
+//criar repositório no github
+
+git remote add origin //tecla insert para colar o repositório
+
+git pull origin master
+//faz com que baixe tudo
+
+----------------------------
+
+git add --all
+//faz com que tudo que foi criado e alterado seja adicionado ao stage area
+
+git commit -m "iniciamos o projeto"
+//faz o commit do projeto
+
+git push origin master
+//empurra os arquivos no repositório na nuvem (Git Hub)
+
+//conferir se subiu no GitHub
+
+
+
+
